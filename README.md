@@ -36,3 +36,29 @@ The application is intentionally kept minimal and generic, allowing it to be use
 - Notifications
 - Advanced list organization
 - UI enhancements
+
+
+## Feature Map
+
+### User accounts
+- Users can register and log in
+- Users have their own checklists
+
+### Checklists
+- Create a new checklist
+- Edit checklist title
+- Delete a checklist
+
+### Checklist items
+- Add items to a checklist
+- Mark items as completed
+- Remove items from a checklist
+
+### Sharing
+- Share a checklist with another user
+- Multiple users can view and modify the same checklist
+
+### Offline & PWA
+- View checklists while offline
+- Changes sync when back online
+
