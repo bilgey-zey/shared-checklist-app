@@ -80,9 +80,73 @@ Returns a list of all checklists available to the user.
     "title": "Shopping list"
   },
   {
-    "id": 2,
+   "id": 2,
     "title": "Trip preparation"
   }
 ]
+
+
+### Create a new checklist
+
+**POST** `/api/checklists`
+
+Creates a new checklist owned by the user.
+
+**Request body (example):**
+```json
+{
+  "title": "Weekend tasks"
+}
+
+
+### Get a single checklist
+
+**GET** `/api/checklists/{id}`
+
+Returns one specific checklist with its items.
+
+**Response (example):**
+```json
+{
+  "id": 1,
+  "title": "Shopping list",
+  "items": [
+    {
+      "id": 1,
+      "text": "Milk",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "text": "Bread",
+      "completed": true
+    }
+  ]
+}
+
+### Add item to a checklist
+
+**POST** `/api/checklists/{id}/items`
+
+Adds a new item to a specific checklist.
+
+**Request body (example):**
+```json
+{
+  "text": "Buy eggs"
+}
+
+### Update item completion status
+
+**PATCH** `/api/checklists/{id}/items/{itemId}`
+
+Updates the completion status of a specific checklist item.
+
+**Request body (example):**
+```json
+{
+  "completed": true
+}
+
 
 
