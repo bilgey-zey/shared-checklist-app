@@ -62,3 +62,7 @@ The application is intentionally kept minimal and generic, allowing it to be use
 - View checklists while offline
 - Changes sync when back online
 
+
+Start working on API
+## API Design (Scaffold)
+
