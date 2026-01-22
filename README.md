@@ -66,13 +66,9 @@ The application is intentionally kept minimal and generic, allowing it to be use
 Start working on API
 ## API Design (Scaffold)
 
-### Get all checklists
+GET /api/checklists
 
-**GET** `/api/checklists`
-
-Returns a list of all checklists available to the user.
-
-**Response (example):**
+Response (example):
 ```json
 [
   {
@@ -80,33 +76,21 @@ Returns a list of all checklists available to the user.
     "title": "Shopping list"
   },
   {
-   "id": 2,
+    "id": 2,
     "title": "Trip preparation"
   }
 ]
+POST /api/checklists
 
+Request body (example):
 
-### Create a new checklist
-
-**POST** `/api/checklists`
-
-Creates a new checklist owned by the user.
-
-**Request body (example):**
-```json
 {
   "title": "Weekend tasks"
 }
+GET /api/checklists/{id}
 
+Response (example):
 
-### Get a single checklist
-
-**GET** `/api/checklists/{id}`
-
-Returns one specific checklist with its items.
-
-**Response (example):**
-```json
 {
   "id": 1,
   "title": "Shopping list",
@@ -123,30 +107,19 @@ Returns one specific checklist with its items.
     }
   ]
 }
+POST /api/checklists/{id}/items
 
-### Add item to a checklist
+Request body (example):
 
-**POST** `/api/checklists/{id}/items`
-
-Adds a new item to a specific checklist.
-
-**Request body (example):**
-```json
 {
   "text": "Buy eggs"
 }
+PATCH /api/checklists/{id}/items/{itemId}
 
-### Update item completion status
+Request body (example):
 
-**PATCH** `/api/checklists/{id}/items/{itemId}`
-
-Updates the completion status of a specific checklist item.
-
-**Request body (example):**
-```json
 {
   "completed": true
 }
-
 
 
