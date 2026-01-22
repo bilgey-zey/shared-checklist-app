@@ -135,3 +135,25 @@ Request body (example):
   "completed": true
 }
 
+## Usage Example
+
+This middleware can be used in an Express.js application to protect checklist routes.
+
+Example:
+
+```js
+const express = require("express");
+const checkOwnership = require("./checkOwnership");
+
+const app = express();
+
+// Mock user id middleware
+app.use((req, res, next) => {
+  req.userId = 1;
+  next();
+});
+
+app.patch("/api/checklists/:id", checkOwnership, (req, res) => {
+  res.json({ message: "Checklist updated" });
+});
+
