@@ -66,9 +66,14 @@ The application is intentionally kept minimal and generic, allowing it to be use
 Start working on API
 ## API Design (Scaffold)
 
+
+```json
+
+
+
 GET /api/checklists
 
-Response (example):
+Request (example):
 ```json
 [
   {
@@ -80,6 +85,8 @@ Response (example):
     "title": "Trip preparation"
   }
 ]
+
+
 POST /api/checklists
 
 Request body (example):
@@ -87,6 +94,8 @@ Request body (example):
 {
   "title": "Weekend tasks"
 }
+
+
 GET /api/checklists/{id}
 
 Response (example):
@@ -107,6 +116,8 @@ Response (example):
     }
   ]
 }
+
+
 POST /api/checklists/{id}/items
 
 Request body (example):
@@ -114,6 +125,8 @@ Request body (example):
 {
   "text": "Buy eggs"
 }
+
+
 PATCH /api/checklists/{id}/items/{itemId}
 
 Request body (example):
@@ -121,5 +134,4 @@ Request body (example):
 {
   "completed": true
 }
-
 
