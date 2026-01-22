@@ -66,3 +66,23 @@ The application is intentionally kept minimal and generic, allowing it to be use
 Start working on API
 ## API Design (Scaffold)
 
+### Get all checklists
+
+**GET** `/api/checklists`
+
+Returns a list of all checklists available to the user.
+
+**Response (example):**
+```json
+[
+  {
+    "id": 1,
+    "title": "Shopping list"
+  },
+  {
+    "id": 2,
+    "title": "Trip preparation"
+  }
+]
+
+
